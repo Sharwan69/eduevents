@@ -39,11 +39,6 @@ Open:
 - Public portal: http://127.0.0.1:5000/
 - Admin dashboard: http://127.0.0.1:5000/admin
 
-Admin login:
-
-- Username: `admin`
-- Password: `admin123`
-
 ## Structure
 
 ```text
