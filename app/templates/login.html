@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Login - EduEvents{% endblock %}
+
+{% block content %}
+<section class="panel" style="max-width: 480px; margin: 30px auto;">
+  <h1 class="page-title">Admin Login</h1>
+  <p class="lead">Sign in to open the event dashboard.</p>
+  <div id="loginNotice" class="notice"></div>
+  <div class="form">
+    <div class="field">
+      <label for="username">Username</label>
+      <input id="username" type="text" autocomplete="username" />
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" type="password" autocomplete="current-password" />
+    </div>
+    <button class="button primary" type="button" onclick="login()">Login</button>
+  </div>
+</section>
+
+<script>
+function showNotice(message, type) {
+  const notice = document.getElementById('loginNotice');
+  notice.textContent = message;
+  notice.className = 'notice show ' + type;
+}
+
+function login() {
+  fetch('/api/login', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      username: document.getElementById('username').value.trim(),
+      password: document.getElementById('password').value.trim()
+    })
+  })
+  .then(response => response.json().then(data => ({ok: response.ok, data})))
+  .then(result => {
+    if (!result.ok) {
+      showNotice(result.data.message || 'Invalid credentials', 'error');
+      return;
+    }
+    sessionStorage.setItem('adminToken', result.data.token);
+    window.location.href = '/dashboard';
+  })
+  .catch(() => showNotice('Login failed. Please try again.', 'error'));
+}
+</script>
+{% endblock %}
