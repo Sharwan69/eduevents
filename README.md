@@ -9,8 +9,8 @@ Default connection:
 ```text
 Host: localhost
 Port: 3306
-User: root
-Password: root
+User: " "
+Password: " "
 Database: eduevents
 ```
 
@@ -29,7 +29,6 @@ The app creates the `eduevents` database and tables automatically.
 ## Run
 
 ```powershell
-cd C:\Users\Demon\Documents\Codex\eduevents_flask
 .\.venv\Scripts\python.exe -m pip install -r requirement.txt
 .\.venv\Scripts\python.exe run.py
 ```
@@ -42,11 +41,6 @@ Open:
 - Register: http://127.0.0.1:5000/register
 - About: http://127.0.0.1:5000/about
 - Database: http://127.0.0.1:5000/database
-
-Admin login:
-
-- Username: `softwarica`
-- Password: `chunnu_1128`
 
 ## Structure
 
