@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}About - EduEvents{% endblock %}
+
+{% block content %}
+<section class="page-shell">
+  <div class="page-grid">
+    <div class="page-intro">
+      <div class="eyebrow">About Portal</div>
+      <h1 class="page-title">About <em>EduEvents</em></h1>
+      <p class="lead">EduEvents helps schools publish events, manage registrations, and track participants from one simple dashboard.</p>
+      <a class="button primary" href="{{ url_for('pages.register') }}">Register for an Event</a>
+
+      <div class="mini-stack" style="margin-top: 22px;">
+        <div class="mini-card">
+          <i class="fas fa-bullhorn"></i>
+          <div>
+            <h3>Event publishing</h3>
+            <p>Create and present academic, cultural, and sports events clearly.</p>
+          </div>
+        </div>
+        <div class="mini-card">
+          <i class="fas fa-user-check"></i>
+          <div>
+            <h3>Student registration</h3>
+            <p>Collect class, section, roll number, and email in one flow.</p>
+          </div>
+        </div>
+        <div class="mini-card">
+          <i class="fas fa-chart-pie"></i>
+          <div>
+            <h3>Admin visibility</h3>
+            <p>Track counts, participation, and status from the dashboard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <h2 class="panel-title">What the platform covers</h2>
+        <p class="panel-sub">A quick overview of the core parts of the system.</p>
+      </div>
+      <div class="table-section">
+        <div class="about-overview-strip">
+          <div class="about-overview-metric">
+            <span>Core Areas</span>
+            <strong>4</strong>
+          </div>
+          <div class="about-overview-metric">
+            <span>Admin Flow</span>
+            <strong>Full CRUD</strong>
+          </div>
+          <div class="about-overview-metric">
+            <span>Student Access</span>
+            <strong>Fast Register</strong>
+          </div>
+        </div>
+
+        <div class="about-feature-grid">
+          <article class="about-feature-card">
+            <div class="about-feature-top">
+              <div class="about-feature-icon"><i class="fas fa-calendar-star"></i></div>
+              <span class="about-feature-badge">Planning</span>
+            </div>
+            <h3>Events</h3>
+            <p>Create academic, cultural, sports, workshop, seminar, and competition events.</p>
+            <ul class="about-feature-list">
+              <li>Date, time, venue, organizer</li>
+              <li>Status and capacity management</li>
+              <li>Search and filter ready</li>
+            </ul>
+          </article>
+
+          <article class="about-feature-card">
+            <div class="about-feature-top">
+              <div class="about-feature-icon"><i class="fas fa-user-graduate"></i></div>
+              <span class="about-feature-badge">Access</span>
+            </div>
+            <h3>Students</h3>
+            <p>Students can register online using their class, section, roll number, and email.</p>
+            <ul class="about-feature-list">
+              <li>Simple registration form</li>
+              <li>Duplicate roll checks</li>
+              <li>Live event selection</li>
+            </ul>
+          </article>
+
+          <article class="about-feature-card">
+            <div class="about-feature-top">
+              <div class="about-feature-icon"><i class="fas fa-chart-column"></i></div>
+              <span class="about-feature-badge">Control</span>
+            </div>
+            <h3>Dashboard</h3>
+            <p>Admins can view event counts, registrations, capacity, and participant lists.</p>
+            <ul class="about-feature-list">
+              <li>Quick stats and breakdowns</li>
+              <li>Participant management</li>
+              <li>Event editing workflow</li>
+            </ul>
+          </article>
+
+          <article class="about-feature-card">
+            <div class="about-feature-top">
+              <div class="about-feature-icon"><i class="fas fa-image"></i></div>
+              <span class="about-feature-badge">Media</span>
+            </div>
+            <h3>Uploads</h3>
+            <p>Event banners can be attached so listings look more complete and easier to scan.</p>
+            <ul class="about-feature-list">
+              <li>Visual event presentation</li>
+              <li>Cleaner portal cards</li>
+              <li>Better browsing experience</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="about-bottom-note">
+          <i class="fas fa-sparkles"></i>
+          <span>Everything is designed to keep event discovery simple for students and management efficient for admins.</span>
+        </div>
+      </div>
+    </section>
+  </div>
+</section>
+{% endblock %}
