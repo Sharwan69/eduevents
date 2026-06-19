@@ -62,6 +62,8 @@ eduevents_flask/
 |   |   |-- css/
 |   |   |   `-- register.css
 |   |   `-- uploads/
+|   |-- test/
+|   |   `-- test_app.py
 |   `-- templates/
 |       |-- about.html
 |       |-- base.html
