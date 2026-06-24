@@ -1,5 +1,10 @@
 .venv/
 __pycache__/
 *.pyc
-static/uploads/*
-!static/uploads/.gitkeep
+app/static/uploads/*
+!app/static/uploads/.gitkeep
+
+
+.env
+.env.local
+.env.production
